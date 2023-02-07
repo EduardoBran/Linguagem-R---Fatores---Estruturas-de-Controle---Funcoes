@@ -1,0 +1,35 @@
+** Condicionais If-Else **
+
+if(condicao){
+conjunto de tarefas}
+else{
+outro conjunto de tarefas}
+
+ifelse(condicao, tarefa1, tarefa2)
+
+
+
+** Loop For **
+
+for(i in 1:N){
+conjunto de tarefas}
+
+for(i in 1:10{
+print('Isso é um loop')}
+
+
+
+** Loop While **
+
+while(condicao satisfeita){
+conjunto de tarefas}
+
+
+
+** Repeticoes **
+
+rep(x, y)
+
+rep(repita x, y vezes)
+
+repeat{}
