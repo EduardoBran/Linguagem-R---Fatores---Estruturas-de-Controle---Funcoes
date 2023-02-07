@@ -1,0 +1,58 @@
+          Idade      Peso      Sexo
+Pessoa1    41         62     Masculino    
+Pessoa2    37         78     Feminino
+
+
+Idade   - Variável numérica
+Peso    - Variável numérica
+Sexo    - Variável categórica (não numérica)
+
+Pessoa1 - Elemento ou observações
+Pessoa2 - Elemento ou observações
+
+
+
+************ Variáveis Qualitativas (Categóricas) ************ 
+
+- Uma variável categórica pertence a um número limitado de categorias.
+- São as características que não possuem valores quantitativas, mas que ao contrário são definidas
+por categorias, ou seja, representam uma classificação dos individuos, podendo ser nominais ou ordinais.
+
+    Nominais                Ordinais
+
+- Profissão		- Escolaridade
+- Sexo			- Classe Social
+- Religião		- Fila
+
+
+
+************ Variáveis Quantitativas (Numéricas) ************ 
+
+- Uma variável categórica pertence a um número infinito de valores.
+- São valores numéricos em que podem ter um número infinito (discretas) ou qualquer tipo de valor (contínuas).
+
+    Discretas                Contínuas
+
+- Nº de filhos		- Altura
+- Nº de carros		- Peso
+- Nº de acessos		- Salário
+
+
+Compreendendo o tipo de variável conseguiremos compreender o tipo de técnica de análise utilizada.
+Exemplo: existem técnicas estatística específicas para variáveis qualitativas e quantitativas.
+
+
+Uma variável originalmente quantitativa pode ser coletado de forma qualitativa (não ficar preso a definição e sim a que a variável representa).
+Por exemplo: a variável idade, medida em anos completos, é quantitativa (contínua); mas se for informada apenas a faixa etária (0 a 5 anos, 6 a 10 anos, etc...), é qualitativa (ordinal).
+
+Outro exemplo é o peso dos lutadores de boxe, uma variável quantitativa (contínua) se trabalhamos com o valor obtido na balança, mas qualitativa (ordinal) se o classificarmos nas categorias do boxe (peso-pena, peso-leve, peso-pesado, etc.)
+
+*** Nem sempre uma variável representada por números é quantitativa ***
+
+O número do telefone de uma pessoa, o número da casa, o número de sua identidade. Às vezes o sexo do indivíduo é registrado na planilha de dados como 1 se masculino e 2 se feminino, por exemplo.
+Isso não significa que a variável sexo passou a ser quantitativa!
+
+
+*** Lembrar ***
+
+Precisamos conhecer os dados que tem em mãos, para poder trabalhar a análise e selecionar as técnicas adequadas.
