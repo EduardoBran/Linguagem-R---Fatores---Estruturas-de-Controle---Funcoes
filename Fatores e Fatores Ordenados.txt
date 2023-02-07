@@ -1,0 +1,17 @@
+*********** Fatores ***********
+
+O termo fator se refere a tipos de dados estatísticos usados para armazenar variáveis categórias. Fatores são variáveis categórias que são muito úteis em sumarização de estatísticas, plots e regressões.
+
+Fatores representam uma maneira muito eficiente para armazenar valores de caracteres, porque cada caracter único é armazenado apenas uma vez e os dados são armazenados como um vetor de inteiros.
+
+A linguagem R trás essa estrutura chamada Fator como forma de tratar de uma maneira mais performática as variáveis categóricas que normalmente são textos, palavras, caracteres. Internamente são tratadas como vetor de inteiros, é como se a linguagem transformasse uma palavra em um vetor de números inteiros e assim ganhar mais performance.
+
+Para criar fatores usamos a função factor()
+
+
+
+*********** Fatores Ordenados ***********
+
+É um tipo especial de Fator, que são fatores pelos quais se preserva-se a ordenação natural dos níveis das variáveis.
+
+Criamos fatores ordenados utilizando factor(..., ord = T) ou ordered()
