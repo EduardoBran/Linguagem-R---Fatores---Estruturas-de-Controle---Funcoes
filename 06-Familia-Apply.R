@@ -9,7 +9,7 @@ getwd()
 
 # Funcoes da Family Apply
 
-#  apply() - arrays e matrizes
+#  apply() - arrays , matrizes, dataframe
 # tapply() - os vetores podem ser divididos em diferentes subsets
 # lapply() - vetores e listas
 # sapply() - versao amigavel da lapply
@@ -90,12 +90,13 @@ escola$Matematica
 escola$Media = NA # add coluna Media
 escola
 
-escola$Media = apply(escola[, c(2,3,4)], 1, mean) #,] antes da virgula vazio indica todas as linhas e depois um vetor escolhendo quais colunas usar
+escola$Media = apply(escola[, c(2,3,4)], 1, mean) #,] antes da virgula vazio indica usar as linhas e depois um vetor escolhendo quais colunas usar
 escola
 
 escola$Media = round(escola$Media)
 escola
 
+# Calculando a media e soma dos gols
 
 gols <- data.frame(Jogadores = c('Messi', 'CR7', 'Lewa', 'Neymar', 'Ibra'),
                    Ano2019 = c(60, 55, 51, 35, 42),
@@ -109,5 +110,28 @@ gols$Media = apply(gols[, c(2,3,4,5)], 1, mean)
 gols$Media = round(gols$Media)
 gols
 
+# gols$Total = apply(gols[2, c(2,3,4,5)], 1, sum) usa só a linha 2
 gols$Total = apply(gols[, c(2,3,4,5)], 1, sum)
 gols
+
+
+
+# tapply()
+
+?gl # gera níveis de fator
+
+tabela_basquete <- data.frame(equipe = gl(5, 5, labels = paste("Equipe", LETTERS[1:5])),
+                              jogador = sample(letters, 25),
+                              num_cestas = floor(runif(25, min=0, max=50)))
+
+View(tabela_basquete) # dataframe gerado com 5 equipes (a, b, c, d, e) onde cada equipe tem 5 jogadores nomeados aleatoriamente por letras
+summary(tabela_basquete)
+
+# Como calcular o total de cestas por equipe ?
+
+# tapply() vs sqldf
+
+install.packages('sqldf')
+library(sqldf)
+
+
