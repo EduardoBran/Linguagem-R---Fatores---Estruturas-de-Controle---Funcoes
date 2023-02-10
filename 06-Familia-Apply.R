@@ -147,4 +147,72 @@ tapply(tabela_basquete$num_cestas, tabela_basquete$equipe, sum)
 tapply(tabela_basquete$num_cestas, tabela_basquete$equipe, mean)
 
 
+# by()
+?by
 
+testando = c(rep(c(1,2,3), each=5)) # 1 1 1 1 1 2 2 2 2 2 3 3 3 3 3
+testando
+
+# quase uma cópia do Iris que vem com o R
+
+dat <- data.frame(species=c(rep(c(1,2,3), each=5)), 
+                  petal.length=c(rnorm(5, 4.5, 1),
+                                 rnorm(5, 4.5, 1),
+                                 rnorm(5, 4.5, 1)),
+                  petal.width=c(rnorm(5, 2.5, 1),
+                                rnorm(5, 2.5, 1),
+                                rnorm(5, 4, 1)))
+
+View(dat)
+
+# convertendo a coluna species em factor
+dat$species <- factor(dat$species)
+View(dat)
+
+# calcular o comprimento médio da petala (petal) utilizando a funcao by()
+
+by(dat, dat$species, function(x){
+  mean.petal <- mean(x$petal.length)
+})
+
+
+
+# lapply()
+
+?lapply
+
+lista1 <- list(a = (1:20), b = (45:77))
+lista1
+
+lapply(lista1, sum)
+lapply(lista1, mean)
+sapply(lista1, sum)
+sapply(lista1, mean)
+
+
+# vapply() - faremos o resumo estatistico de cada elemento da lista1 
+# com 1 e 3 quartil, valor minimo e maximo e media
+
+vapply(lista1, fivenum, c(Min. = 0, '1st Qu.' = 0, Median = 0, '3rd Qu.' = 0, Max = 0))
+
+
+
+# replicate()
+
+replicate(4, runif(10))
+
+
+
+# mapply()
+
+mapply(rep, 1:4, 4:1)
+
+
+
+# rapply() - usa de forma recursiva
+
+lista2 <- list(a = c(1:5), b = c(6:10))
+lista2
+
+rapply(lista2, sum)
+rapply(lista2, sum, how = "list")
