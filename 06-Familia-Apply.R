@@ -106,7 +106,7 @@ gols <- data.frame(Jogadores = c('Messi', 'CR7', 'Lewa', 'Neymar', 'Ibra'),
 
 gols
 
-gols$Media = apply(gols[, c(2,3,4,5)], 1, mean)
+gols$Media = apply(gols[, c(2,3,4,5)], 1, mean) # gols$Media = apply(gols[, c(2:5)], 1, mean)
 gols$Media = round(gols$Media)
 gols
 
@@ -116,9 +116,10 @@ gols
 
 
 
-# tapply()
+# Agora vamos criar um dataframe com dados gerados aleatoriamente e iremos maniupular esses dados
+# utilizando a linguagem sql direto no R e depois fazendo a mesma coisa utilizando a funca tapply()
 
-?gl # gera níveis de fator
+?gl # funcao que gera níveis de fator
 
 tabela_basquete <- data.frame(equipe = gl(5, 5, labels = paste("Equipe", LETTERS[1:5])),
                               jogador = sample(letters, 25),
@@ -127,11 +128,23 @@ tabela_basquete <- data.frame(equipe = gl(5, 5, labels = paste("Equipe", LETTERS
 View(tabela_basquete) # dataframe gerado com 5 equipes (a, b, c, d, e) onde cada equipe tem 5 jogadores nomeados aleatoriamente por letras
 summary(tabela_basquete)
 
-# Como calcular o total de cestas por equipe ?
+# Como calcular o total/média de cestas por equipe ?
 
-# tapply() vs sqldf
+# Utilizando sqldf (utilizando linguagem sql diretamente no R)
 
 install.packages('sqldf')
 library(sqldf)
+
+total_cestas_sqldf <- sqldf('select equipe, sum(num_cestas) from tabela_basquete group by equipe')
+total_cestas_sqldf
+
+# sqldf('DROP TABLE tabela_basquete') # excluir tabela
+
+
+# Utilizando tapply() # chama primeiro a coluna a ser usado, dps o agrupamento e por fim a funcao
+
+tapply(tabela_basquete$num_cestas, tabela_basquete$equipe, sum)
+tapply(tabela_basquete$num_cestas, tabela_basquete$equipe, mean)
+
 
 
