@@ -1,6 +1,6 @@
 # Familia Apply - Uma Forma Elegante de Fazer Loops
 
-# Configurando Diretório de Trabalho
+# Configurando Diretorio de Trabalho
 setwd("C:/Users/Julia/Desktop/CienciaDeDados/1.Big-Data-Analytics-com-R-e-Microsoft-Azure-Machine-Learning/3.Linguagem-R- Fatores-Estruturas-de-Controle-e-Funcoes")
 getwd()
 
