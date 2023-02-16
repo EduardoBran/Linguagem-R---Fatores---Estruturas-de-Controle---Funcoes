@@ -1,7 +1,7 @@
 # Lista de Exercicios - Capitulo 3
 
 # Configurando Diretorio de Trabalho
-setwd("C:/Users/Julia/Desktop/CienciaDeDados/1.Big-Data-Analytics-com-R-e-Microsoft-Azure-Machine-Learning/3.Linguagem-R- Fatores-Estruturas-de-Controle-e-Funcoes")
+setwd("C:/Users/Julia/Desktop/CienciaDeDados/1.Big-Data-Analytics-com-R-e-Microsoft-Azure-Machine-Learning/3.Linguagem-R-Fatores-Estruturas-de-Controle-e-Funcoes")
 getwd()
 
 # Exercicio 1 - Pesquise pela funcao que permite listar todos os arquivo no diretorio de trabalho
@@ -53,11 +53,19 @@ mat1
 
 
 
+
+
 # ---------------------------------------------------------------------------------------------------------
 
 # Exercicio 1 - Pesquise pela funcao que permite listar todos os arquivo no diretorio de trabalho
 
 dir()
+
+
+# ********** Gabarito ********** 
+
+list.files()
+
 
 
 
@@ -80,6 +88,17 @@ View(df_exe2)
 subset(df_exe2, Numerico > 270) # exibindo somente as que tem numero > 270 na coluna Numerico
 
 
+# ********** Gabarito ********** 
+
+charc_vec <- c('A', 'B', 'C')
+num_vec <- c(4.5, 3.9, 7.2)
+logic_vec <- c(TRUE, TRUE, FALSE)
+
+df1 <- data.frame(charc_vec, num_vec, logic_vec)
+df1
+
+
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -95,11 +114,25 @@ qtd = 0
 for(i in vec_exe3){
   if(i > 10){
     qtd = qtd + 1
-    print(paste('O numero', i, 'é maior que 10'))
+    print(paste('O numero', i, '? maior que 10'))
   }
 }
 
 print(paste('Tem ', qtd, ' numeros maior que 10'))
+
+
+# ********** Gabarito ********** 
+
+for (i in 1:length(vec_exe3)){  # 1:ATÃ‰ O COMPRIMENTO DO VALOR
+  if(vec_exe3[i] > 10) {
+    print(vec_exe3[i])
+    print('Este elemento do vetor Ã© maior que 10')
+  }
+  else {
+    print(vec_exe3[i])
+    print('Este elemento do vetor NAO Ã© maior que 10')
+  }
+}
 
 
 
@@ -113,6 +146,13 @@ lista_exe4
 for(i in lista_exe4) {
   print(i)
 }
+
+
+# ********** Gabarito ********** 
+
+#for (i in 1:length(lista_exe4)) {
+#  print(lista_exe4[i])
+#}
 
 
 
@@ -149,12 +189,17 @@ m_i_normal <- m %*% i
 m_i_normal
 
 
+# ********** Gabarito ********** 
+
+
+
+
 
 # ---------------------------------------------------------------------------------------------------------
 
 # Exercicio 6 - Crie um vetor, matriz, lista e dataframe e faca a nomeacao de cada um dos objetos
 
-# Criando um vetor numérico com 5 elementos
+# Criando um vetor num?rico com 5 elementos
 vet_exe6 <- c(1, 2, 3, 4, 5)
 vet_exe6
 
@@ -197,6 +242,11 @@ names(df_exe6) <- c('Nome', 'Idade', 'Altura')
 df_exe6
 
 
+# ********** Gabarito ********** 
+
+
+
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -216,6 +266,11 @@ mat_exe7[indices_na] <- NA
 mat_exe7
 
 
+# ********** Gabarito ********** 
+
+
+
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -231,6 +286,11 @@ soma_por_coluna <- apply(mat_exe8, 2, sum)
 soma_por_coluna
 
 
+# ********** Gabarito ********** 
+
+
+
+
 
 # ---------------------------------------------------------------------------------------------------------
 
@@ -241,6 +301,12 @@ vet_exe9
 
 vet_exe9_ordernado <- sort(vet_exe9)
 vet_exe9_ordernado
+
+
+# ********** Gabarito ********** 
+
+
+
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -255,5 +321,10 @@ for(i in mat_exe10){
     print(i)
   }
 }
+
+
+# ********** Gabarito ********** 
+
+
 
 
